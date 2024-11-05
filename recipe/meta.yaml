@@ -10,7 +10,7 @@ source:
   sha256: f598bf573058cfaeed5cc412691e3bbc07df1350b8fc6f4f0f29d8eba65e5c0d
 
 build:
-  number: 2
+  number: 3
 
 outputs:
   - name: etspy
@@ -32,6 +32,7 @@ outputs:
         - typing_extensions >=4.12.2,<5.0.0
         - numpy >=2.0.0,<3.0.0
         - h5py >=3.12.1,<4.0.0
+        - ffmpeg
       run_constrained:
         - ipykernel >=6.29.5,<7.0.0
         - cupy >=13.3.0,<14.0.0
