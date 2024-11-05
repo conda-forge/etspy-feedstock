@@ -1,5 +1,5 @@
 {% set name = "etspy" %}
-{% set version = "0.9.3a3" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/etspy-{{ version }}.tar.gz
-  sha256: f598bf573058cfaeed5cc412691e3bbc07df1350b8fc6f4f0f29d8eba65e5c0d
+  sha256: 5a45e167bc2feb4be97b3cf1c751a023bd36ee12616ff913ca961a1d0cd879ac
 
 build:
-  number: 3
+  number: 0
 
 outputs:
   - name: etspy
