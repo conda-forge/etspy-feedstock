@@ -10,13 +10,13 @@ source:
   sha256: f598bf573058cfaeed5cc412691e3bbc07df1350b8fc6f4f0f29d8eba65e5c0d
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - name: etspy
     build:
       noarch: python
-    script: python -m pip install . -vv --no-deps --no-build-isolation
+    script: install.sh
     requirements:
       host:
         - python >=3.10,<3.13
