@@ -52,6 +52,15 @@ outputs:
       run:
         - {{ pin_subpackage('etspy', exact=True) }}
         - cupy >=13.3.0,<14.0.0
+    test:
+      imports:
+        - etspy
+        - etspy.api
+        - cupy
+      commands:
+        - pip check
+      requires:
+        - pip
 
 about:
   home: https://pages.nist.gov/etspy/
