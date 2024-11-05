@@ -30,6 +30,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-etspy-green.svg)](https://anaconda.org/conda-forge/etspy) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/etspy.svg)](https://anaconda.org/conda-forge/etspy) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/etspy.svg)](https://anaconda.org/conda-forge/etspy) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/etspy.svg)](https://anaconda.org/conda-forge/etspy) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-etspy--gpu-green.svg)](https://anaconda.org/conda-forge/etspy-gpu) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/etspy-gpu.svg)](https://anaconda.org/conda-forge/etspy-gpu) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/etspy-gpu.svg)](https://anaconda.org/conda-forge/etspy-gpu) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/etspy-gpu.svg)](https://anaconda.org/conda-forge/etspy-gpu) |
 
 Installing etspy
 ================
@@ -41,16 +42,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `etspy` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `etspy, etspy-gpu` can be installed with `conda`:
 
 ```
-conda install etspy
+conda install etspy etspy-gpu
 ```
 
 or with `mamba`:
 
 ```
-mamba install etspy
+mamba install etspy etspy-gpu
 ```
 
 It is possible to list all of the versions of `etspy` available on your platform with `conda`:
