@@ -39,9 +39,10 @@ outputs:
       imports:
         - etspy
         - etspy.api
+      # uncomment when etspy >1.0.1 is released
+      # needed to avoid pip check failure with etspy 1.0.1
+      # https://github.com/usnistgov/etspy/pull/35
       # commands:
-      #   # remove when etspy >1.0.1 is released
-      #   # needed to avoid pip check failure with etspy 1.0.1
       #   - pip check
       requires:
         - pip
@@ -59,9 +60,10 @@ outputs:
         - etspy
         - etspy.api
         - cupy
+      # uncomment when etspy >1.0.1 is released
+      # needed to avoid pip check failure with etspy 1.0.1
+      # https://github.com/usnistgov/etspy/pull/35
       # commands:
-      #   # remove when etspy >1.0.1 is released
-      #   # needed to avoid pip check failure with etspy 1.0.1
       #   - pip check
       requires:
         - pip
