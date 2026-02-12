@@ -24,7 +24,7 @@ outputs:
         - poetry-core
         - pip
       run:
-        - python >={{ python_min }},<3.13
+        - python >={{ python_min }}
         - pystackreg >=0.2.8,<0.3.0
         - astra-toolbox >=2.1.0,<3.0.0
         - hyperspy-base >=2.1.1,<3.0.0
@@ -32,7 +32,7 @@ outputs:
         - typing_extensions >=4.12.2,<5.0.0
         - numpy >=1.26.0,<3.0.0
         - h5py >=3.12.1,<4.0.0
-        - ffmpeg
+        - scikit-iamge >=0.24
       run_constrained:
         - ipykernel >=6.29.5,<7.0.0
         - cupy >=13.3.0,<14.0.0
@@ -40,9 +40,6 @@ outputs:
       imports:
         - etspy
         - etspy.api
-      # uncomment when etspy >1.0.1 is released
-      # needed to avoid pip check failure with etspy 1.0.1
-      # https://github.com/usnistgov/etspy/pull/35
       # commands:
       #   - pip check
       requires:
