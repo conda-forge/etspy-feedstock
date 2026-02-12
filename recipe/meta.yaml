@@ -40,8 +40,8 @@ outputs:
       imports:
         - etspy
         - etspy.api
-      # commands:
-      #   - pip check
+      commands:
+        - pip check
       requires:
         - pip
   - name: etspy-gpu
@@ -58,11 +58,8 @@ outputs:
         - etspy
         - etspy.api
         - cupy
-      # uncomment when etspy >1.0.1 is released
-      # needed to avoid pip check failure with etspy 1.0.1
-      # https://github.com/usnistgov/etspy/pull/35
-      # commands:
-      #   - pip check
+      commands:
+        - pip check
       requires:
         - pip
         - python {{ python_min }}
