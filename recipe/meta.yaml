@@ -44,6 +44,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
   - name: etspy-gpu
     build:
       noarch: python
@@ -51,6 +52,7 @@ outputs:
       host:
         - python {{ python_min }}
       run:
+        - python >={{ python_min }}
         - {{ pin_subpackage('etspy', exact=True) }}
         - cupy >=13.3.0,<14.0.0
     test:
