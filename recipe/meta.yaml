@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "etspy" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/etspy-{{ version }}.tar.gz
-  sha256: 14ea827ac3ef75888113477f7825406073bd38a31c56211bd92a22481dbbac0a
+  sha256: 4f641f1f9d6f70de5dd862710dcc383fd8ecf1f191362031a86413a113239e68
 
 build:
   number: 0
