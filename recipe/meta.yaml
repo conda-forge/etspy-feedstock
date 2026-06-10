@@ -35,7 +35,7 @@ outputs:
         - scikit-image >=0.24
       run_constrained:
         - ipykernel >=6.29.5,<7.0.0
-        - cupy >=13.3.0,<14.0.0
+        - cupy >=13.3.0,<15.0.0
     test:
       imports:
         - etspy
@@ -54,7 +54,7 @@ outputs:
       run:
         - python >={{ python_min }}
         - {{ pin_subpackage('etspy', exact=True) }}
-        - cupy >=13.3.0,<14.0.0
+        - cupy >=13.3.0,<15.0.0
     test:
       imports:
         - etspy
