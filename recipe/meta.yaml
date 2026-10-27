@@ -1,27 +1,27 @@
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 {% set name = "etspy" %}
-{% set version = "1.2.0" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/etspy-{{ version }}.tar.gz
-  sha256: 67c0088d2fa6b48a94d881a872c06ed93d9f28b06b2bf0d0edb168018d37b1ec
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/etspy-{{ version }}.tar.gz
+  sha256: 598cadd27518bca07a95a7a8d59ef870f094416dac13ad18e499e231a5061634
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: etspy
     build:
       noarch: python
-    script: install.sh
+      script: $PYTHON -m pip install . -vv --no-deps --no-build-isolation
     requirements:
       host:
-        - python {{ python_min }}
-        - poetry-core
+        - python >={{ python_min }}
+        - hatchling
         - pip
       run:
         - python >={{ python_min }}
@@ -29,10 +29,12 @@ outputs:
         - astra-toolbox >=2.1.0,<3.0.0
         - hyperspy-base >=2.1.1,<3.0.0
         - hyperspy-gui-ipywidgets >=2.0.2,<3.0.0
+        - ipywidgets
         - typing_extensions >=4.12.2,<5.0.0
         - numpy >=1.26.0,<3.0.0
         - h5py >=3.12.1,<4.0.0
-        - scikit-image >=0.24
+        - scikit-image >=0.26.0,<1.0.0
+        - pillow >=13.0.0
       run_constrained:
         - ipykernel >=6.29.5,<7.0.0
         - cupy >=13.3.0,<15.0.0
@@ -45,6 +47,7 @@ outputs:
       requires:
         - pip
         - python {{ python_min }}
+
   - name: etspy-gpu
     build:
       noarch: python
