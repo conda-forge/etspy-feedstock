@@ -17,7 +17,7 @@ outputs:
   - name: etspy
     build:
       noarch: python
-      script: install.sh
+      script: $PYTHON -m pip install . -vv --no-deps --no-build-isolation
     requirements:
       host:
         - python >={{ python_min }}
