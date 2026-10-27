@@ -1,4 +1,4 @@
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 {% set name = "etspy" %}
 {% set version = "1.3.0" %}
 
@@ -17,20 +17,19 @@ outputs:
   - name: etspy
     build:
       noarch: python
-    script: install.sh
+      script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
     requirements:
       host:
-        - python >=3.11
+        - python >={{ python_min }}
         - hatchling
         - pip
       run:
-        - python >=3.11
+        - python >={{ python_min }}
         - numpy >=1.26.0,<3.0.0
         - pillow >=13.0.0
         - scikit-image >=0.26.0,<1.0.0
         - hyperspy-base >=2.1.1,<3.0.0
         - astra-toolbox >=2.1.0,<3.0.0
-        - cupy >=13.3.0,<15.0.0
       run_constrained:
         - ipykernel >=6.29.5,<7.0.0
         - cupy >=13.3.0,<15.0.0
@@ -43,6 +42,7 @@ outputs:
       requires:
         - pip
         - python {{ python_min }}
+
   - name: etspy-gpu
     build:
       noarch: python
