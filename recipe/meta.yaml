@@ -17,7 +17,7 @@ outputs:
   - name: etspy
     build:
       noarch: python
-      script: "${PYTHON} -m pip install . -vv --no-deps --no-build-isolation"
+      script: install.sh
     requirements:
       host:
         - python >={{ python_min }}
@@ -25,15 +25,16 @@ outputs:
         - pip
       run:
         - python >={{ python_min }}
-        - numpy >=1.26.0,<3.0.0
-        - pillow >=13.0.0
-        - scikit-image >=0.26.0,<1.0.0
-        - hyperspy-base >=2.1.1,<3.0.0
+        - pystackreg >=0.2.8,<0.3.0
         - astra-toolbox >=2.1.0,<3.0.0
-        - pystackreg
-        - scipy
-        - matplotlib-base
-        - tqdm
+        - hyperspy-base >=2.1.1,<3.0.0
+        - hyperspy-gui-ipywidgets >=2.0.2,<3.0.0
+        - ipywidgets
+        - typing_extensions >=4.12.2,<5.0.0
+        - numpy >=1.26.0,<3.0.0
+        - h5py >=3.12.1,<4.0.0
+        - scikit-image >=0.26.0,<1.0.0
+        - pillow >=13.0.0
       run_constrained:
         - ipykernel >=6.29.5,<7.0.0
         - cupy >=13.3.0,<15.0.0
