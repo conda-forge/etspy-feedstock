@@ -1,5 +1,5 @@
 {% set name = "etspy" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/etspy-{{ version }}.tar.gz
-  sha256: 1fcfc4515b9eaf9ca8b360728dbc3e28de21b8fd8895d6a8fa31f095eed00942
+  sha256: 9c8ae16ae6932ec8ebdc6c773b192f7b20f0072b3e99532beebf0f0616ae888d
 
 build:
   number: 0
